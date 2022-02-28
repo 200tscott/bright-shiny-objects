@@ -1,12 +1,81 @@
 // ┌─────────────────┐
 // │ Your code here! │
 // └─────────────────┘
+function createUser(firstName, lastName){
+    let fullName = {
+         firstName,
+        lastName,
+
+    }
+    return fullName
+}
+
+function setAge(user, age){
+    user.age = age
+    return user
+}
+function incrementAge(user) {
+	user["age"] += 1;
+	return user;
+}
+
+function fixCar(car) {
+	car['needsMaintenance'] = false; 
+     
+	return car;
+}
+
+function addGrades(student, newGrades){
+    for(let i = 0; i < newGrades.length; i++){
+        student.grades.push(newGrades[i])
+    }
+    return student;
+}
 
 
+ function getDataType(object, key) {
+        return typeof object[key];
+    } 
 
-
-
-
+    function addTodo(todos, newTodo) {
+        todos.push(newTodo);
+    
+        return todos;
+    }
+    
+    function addSong(playlist, newSong) {
+        playlist["songs"].push(newSong);
+        playlist["duration"] += newSong["duration"];
+    
+        return playlist;
+    }
+    
+    function averageGrade(gradesArry) {
+        let sum = 0;
+    
+        for (let i = 0; i < gradesArry.length; i++) {
+            sum += gradesArry[i];
+        }
+    
+        let average = sum / gradesArry.length;
+        return average;
+    }
+    
+    function updateReportCard(reportCard, newGrade) {
+        reportCard["grades"].push(newGrade);
+    
+        reportCard["averageGrade"] = averageGrade(reportCard["grades"]);
+    
+        if (newGrade < reportCard["lowestGrade"]) {
+            reportCard["lowestGrade"] = newGrade;
+        }
+    
+        if (newGrade > reportCard["highestGrade"]) {
+            reportCard["highestGrade"] = newGrade;
+        }
+    
+        return reportCard;
+    }
 
 
 
